@@ -9,5 +9,5 @@ export const spriteLocation = {
   'King Boo': [5, 2],
   Toad: [4, 1],
   Link: [10, 4],
-  unknown: [5, 5],
+  unknown: [5, 5]
 }

@@ -2,7 +2,7 @@ import { HttpError } from '../errors'
 
 const MODE = 'cors'
 const HEADERS = {
-  'Content-Type': 'application/json',
+  'Content-Type': 'application/json'
 }
 const BASE_URL = process.env.REACT_APP_API_URL
 

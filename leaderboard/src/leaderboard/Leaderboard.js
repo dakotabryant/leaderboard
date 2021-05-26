@@ -9,7 +9,7 @@ export const Leaderboard = ({
   isRace,
   altTextKey,
   altText,
-  title,
+  title
 }) => {
   if (placements.length === 0) return <h2>Loading</h2>
   return (
