@@ -28,7 +28,7 @@ const App = () => {
     const racerPlacements = await getLeaderboard()
     setPlacements(racerPlacements)
   }
-  useInterval(() => fetchRacers(), shouldFetchRacers ? 1000 : null)
+  useInterval(() => fetchRacers(), shouldFetchRacers ? 500 : null)
   return (
     <>
       <GlobalStyle />
