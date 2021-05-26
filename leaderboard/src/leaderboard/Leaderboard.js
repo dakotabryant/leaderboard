@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { getLeaderboard } from './service'
+import { LeaderBoardContainer } from './styles'
 import './Leaderboard.css'
+import { PauseButton } from '../components'
 
 const Placement = ({ placement: { racer, position } }) => (
   <div className="placement">
@@ -12,12 +13,18 @@ const Placement = ({ placement: { racer, position } }) => (
   </div>
 )
 
-export const Leaderboard = ({ placements }) => {
+export const Leaderboard = ({ placements, setShouldFetchRacers, shouldFetchRacers }) => {
+  if (placements.length === 0) return <h2>Loading</h2>
   return (
-    <div>
-      {placements.map((placement) => (
-        <Placement key={placement.racer.name} placement={placement} />
-      ))}
-    </div>
+    <>
+      <LeaderBoardContainer>
+        {setShouldFetchRacers && (
+          <PauseButton onClick={setShouldFetchRacers} isPaused={shouldFetchRacers} />
+        )}
+        {placements.map((placement) => (
+          <Placement key={placement.racer.name} placement={placement} />
+        ))}
+      </LeaderBoardContainer>
+    </>
   )
 }

@@ -14,7 +14,11 @@ const App = () => {
   useInterval(() => fetchRacers(), shouldFetchRacers ? 1000 : null)
   return (
     <div className="app">
-      <Leaderboard placements={placements} />
+      <Leaderboard
+        placements={placements}
+        shouldFetchRacers={shouldFetchRacers}
+        setShouldFetchRacers={setShouldFetchRacers}
+      />
     </div>
   )
 }
