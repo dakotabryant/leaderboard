@@ -1,0 +1,15 @@
+site_name: Frontend Take Home Assesment 
+site_description: Frontend Take Home Assesment for RS. 
+site_author: Reactive Streaming
+site_dir: dist
+docs_dir: site
+copyright: Copyright &copy; 2020, <a href="https://www.reactive-streaming.com">Reactive Streaming Inc</a>.
+dev_addr: 0.0.0.0:5000
+
+nav:
+  - "API":
+    - Leaderboards: 'api/leaderboards.md'
+    - Racers: 'api/racers.md'
+  - Home: 'index.md'
+
+ 

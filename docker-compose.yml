@@ -1,0 +1,29 @@
+services: 
+    api: 
+        restart: always
+        build: ./api
+        command: npm run start:dev
+        ports:
+            - "4000:4000"
+        volumes:
+            - ./api:/app
+            - /app/node_modules
+    leaderboard: 
+        restart: always
+        build: ./leaderboard
+        environment:
+            REACT_APP_API_URL: http://localhost:4000/api/v1
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./leaderboard:/app
+            - /app/node_modules
+    docs:
+        restart: always
+        build: 
+            context: ./docs
+        command: ['mkdocs', 'serve']
+        volumes:
+            - ./docs:/app
+        ports:
+            - "5000:5000"

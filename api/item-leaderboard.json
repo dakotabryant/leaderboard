@@ -1,0 +1,8 @@
+[   
+    { "position:": 1, "name": "Star", "power_level": 110},
+    { "position:": 2, "name": "Blue Shell", "power_level": 100},
+    { "position:": 3, "name": "Horn", "power_level": 80},
+    { "position:": 4, "name": "Red Shell", "power_level": 60},
+    { "position:": 5, "name": "Green Shell", "power_level": 50},
+    { "position:": 6, "name": "Banana", "power_level": 50}
+]

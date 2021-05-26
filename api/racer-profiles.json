@@ -1,0 +1,82 @@
+{
+   "Toad": {
+        "name": "Toad",
+        "speed": 0.75,
+        "acceleration": 0.75,
+        "weight_class": "light",
+        "handling": 0.5,
+        "traction": 0.2
+   },
+   "Shy-Guy": {
+        "name": "Shy Guy",
+        "speed": 0.75,
+        "acceleration": 0.75,
+        "weight_class": "light",
+        "handling": 0.6,
+        "traction": 0.2
+   },
+   "King-Boo": {
+        "name": "King Boo",
+        "speed": 0.75,
+        "acceleration": 0.6,
+        "weight_class": "light",
+        "handling": 0.6,
+        "traction": 0.6
+   },
+   "Mario": {
+        "name": "Mario",
+        "speed": 0.6,
+        "acceleration": 0.5,
+        "weight_class": "medium",
+        "handling": 0.5,
+        "traction": 0.5
+   },
+   "Luigi": {
+        "name": "Luigi",
+        "speed": 0.6,
+        "acceleration": 0.5,
+        "weight_class": "medium",
+        "handling": 0.5,
+        "traction": 0.5
+   },
+   "Peach": {
+        "name": "Peach",
+        "speed": 0.6,
+        "acceleration": 0.5,
+        "weight_class": "medium",
+        "handling": 0.5,
+        "traction": 0.5
+   },
+   "Yoshi": {
+        "name": "Yoshi",
+        "speed": 0.6,
+        "acceleration": 0.5,
+        "weight_class": "medium",
+        "handling": 0.5,
+        "traction": 0.5
+   },
+   "Link": {
+        "name": "Link",
+        "speed": 0.6,
+        "acceleration": 0.5,
+        "weight_class": "heavy",
+        "handling": 0.5,
+        "traction": 0.5
+   },
+   "Wario": {
+        "name": "Wario",
+        "speed": 0.9,
+        "acceleration": 0.2,
+        "weight_class": "heavy",
+        "handling": 0.5,
+        "traction": 0.5
+   },
+   "Bowser": {
+        "name": "Bowser",
+        "speed": 0.9,
+        "acceleration": 0.2,
+        "weight_class": "heavy",
+        "handling": 0.5,
+        "traction": 0.5
+   }
+}
