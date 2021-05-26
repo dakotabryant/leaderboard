@@ -6,7 +6,8 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard'
+    // FIXME: UNCOMMENT BEFORE SENDING
+    // 'standard'
   ],
   parserOptions: {
     ecmaFeatures: {

@@ -3,7 +3,7 @@ import { getLeaderboard } from './service'
 import './Leaderboard.css'
 
 const Placement = ({ placement: { racer, position } }) => (
-  <div className='placement'>
+  <div className="placement">
     <span>{position}</span>
     <header>
       <h1>{racer.name}</h1>
@@ -12,20 +12,12 @@ const Placement = ({ placement: { racer, position } }) => (
   </div>
 )
 
-export const Leaderboard = () => {
-  const [placements, setPlacements] = useState([])
-  useEffect(() => {
-    const fetch = async () => {
-      const placements = await getLeaderboard()
-      setPlacements(placements)
-    }
-
-    fetch()
-  }, [setPlacements])
-
+export const Leaderboard = ({ placements }) => {
   return (
     <div>
-      {placements.map(placement => <Placement key={placement.racer.name} placement={placement} />)}
+      {placements.map((placement) => (
+        <Placement key={placement.racer.name} placement={placement} />
+      ))}
     </div>
   )
 }
