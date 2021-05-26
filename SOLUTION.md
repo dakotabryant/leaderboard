@@ -21,6 +21,7 @@ I decided to implement as many of the stretch features I could, including a coup
 ### Things I did not implement and why
 - I started to add the user based input for time increments as is evidence by the parameter for "interval" in useInterval. It would be pretty straightforward to add a controlled input that has that the state passed in to the useInterval hook
 - I also started to add a "Join the race" feature but was also limited by time. My thought was to have a "Name", "Speed", and then randomly roll on the "bad luck" property. This would add your racer to the race and assign them the "?" portrait as we don't have a mapping for a character. Future iterations to this include something like an "Avatar Selector" etc
+- Testing - Given more time I would have written some unit tests in Jest and e2e tests with Cypress. While I think the project is tiny in scope and wouldn't have been a good use of my time at this juncture, I usually like to at least include them to show that I can write them. 
 
 ## Final thoughts
 This was a fun project and I'm a little bummed I ran out of time. I probably could have spent a LITTLE less time on styles or more time working with the BE, but ultimately I think it came out looking nice and working well. 
