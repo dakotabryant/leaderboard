@@ -7,7 +7,7 @@ import bgImage from './assets/mario-background.jpeg'
 
 const GlobalStyle = createGlobalStyle`
 .app {
-  height: 100vh;
+  min-height: 100vh;
   padding: 1em;
   display: flex;
   flex-flow: column nowrap;

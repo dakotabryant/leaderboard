@@ -16,6 +16,7 @@ export const PlacementContainer = styled(motion.div)`
   margin: 5px 0;
   cursor: pointer;
   border-radius: 15px;
+  ${media.laptop`height: 65px`}
   ${media.tablet`min-width: initial; height: 55px;`};
   p {
     color: white;

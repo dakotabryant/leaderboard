@@ -11,12 +11,16 @@ const racers = [
   new Racer('Yoshi', 0.2, 0.2),
   new Racer('Link', 0.2, 0.2),
   new Racer('Wario', 0.2, 0.2),
-  new Racer('Bowser', 0.15, 0.0)
+  new Racer('Bowser', 0.15, 0.0),
+  new Racer('Dakota', 1, 0.8),
 ]
 
-const racersStore = racers.reduce((store, racer) => store.set(slugify(racer.name), racer), new Map())
+const racersStore = racers.reduce(
+  (store, racer) => store.set(slugify(racer.name), racer),
+  new Map()
+)
 
 module.exports = {
   racers,
-  racersStore
+  racersStore,
 }
