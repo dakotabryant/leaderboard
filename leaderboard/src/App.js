@@ -1,8 +1,25 @@
 import React, { useState } from 'react'
+import { createGlobalStyle } from 'styled-components'
 import { Leaderboard } from './leaderboard'
 import useInterval from './hooks/useInterval'
-import './App.css'
 import { getLeaderboard } from './leaderboard/service'
+import bgImage from './assets/mario-background.jpeg'
+
+const GlobalStyle = createGlobalStyle`
+.app {
+  height: 100vh;
+  padding: 1em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: url(${bgImage});
+  background-size: cover; 
+}
+* {
+  box-sizing: border-box;
+}
+`
 
 const App = () => {
   const [placements, setPlacements] = useState([])
@@ -13,13 +30,16 @@ const App = () => {
   }
   useInterval(() => fetchRacers(), shouldFetchRacers ? 1000 : null)
   return (
-    <div className="app">
-      <Leaderboard
-        placements={placements}
-        shouldFetchRacers={shouldFetchRacers}
-        setShouldFetchRacers={setShouldFetchRacers}
-      />
-    </div>
+    <>
+      <GlobalStyle />
+      <div className="app">
+        <Leaderboard
+          placements={placements}
+          shouldFetchRacers={shouldFetchRacers}
+          setShouldFetchRacers={setShouldFetchRacers}
+        />
+      </div>
+    </>
   )
 }
 

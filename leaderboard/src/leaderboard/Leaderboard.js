@@ -1,6 +1,5 @@
 import React from 'react'
 import { LeaderBoardContainer } from './styles'
-import './Leaderboard.css'
 import { PauseButton, Placement } from '../components'
 
 export const Leaderboard = ({ placements, setShouldFetchRacers, shouldFetchRacers }) => {
