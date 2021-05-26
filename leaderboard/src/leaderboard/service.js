@@ -5,6 +5,7 @@ const HEADERS = {
   'Content-Type': 'application/json',
 }
 const BASE_URL = process.env.REACT_APP_API_URL
+
 export const getLeaderboard = async () => {
   const url = `${BASE_URL}/leaderboards/racers`
   try {
