@@ -6,7 +6,7 @@ export const LeaderBoardContainer = styled.div`
   position: relative;
   text-align: right;
   .title {
-    margin: 0 15px 0 0;
+    padding-right: 15px;
     color: white;
     font-size: 48px;
   }
@@ -23,7 +23,7 @@ export const PlacementContainer = styled(motion.div)`
   cursor: pointer;
   border-radius: 15px;
   margin-right: 15px;
-  ${media.laptop`height: 65px`}
+  ${media.laptop`height: 65px`};
   ${media.tablet`min-width: initial; height: 55px;`};
   p {
     color: white;
@@ -62,6 +62,7 @@ export const ShellPrompt = styled(motion.div)`
   position: absolute;
   right: 0;
   height: 95px;
+  ${media.laptop`height: 65px`};
   img {
     height: 100%;
   }

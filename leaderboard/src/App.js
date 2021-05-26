@@ -15,8 +15,7 @@ const GlobalStyle = createGlobalStyle`
   align-items: center;
   background: url(${bgImage});
   background-size: cover; 
-  ${media.laptop`flex-direction: column`}
-
+  ${media.laptop`flex-direction: column`};
 }
 * {
   box-sizing: border-box;
@@ -53,7 +52,7 @@ const App = () => {
           title="Racers"
           isRace
         />
-        <Leaderboard title="Items" placements={items} altTextKey="power_level" />
+        <Leaderboard title="Items" placements={items} altTextKey="power_level" altText="Power Level" />
       </div>
     </>
   )

@@ -12,7 +12,7 @@ const Placement = ({ position, name, altText, isRace }) => {
       layout
       onHoverStart={() => setShowShell(true)}
       onHoverEnd={() => setShowShell(false)}
-      onClick={() => shellRacer(racer.name)}
+      onClick={() => shellRacer(name)}
     >
       <Position>{position}</Position>
       <RacerNameplate>
@@ -24,7 +24,7 @@ const Placement = ({ position, name, altText, isRace }) => {
         <AnimatePresence>
           <ShellPrompt
             initial={{ opacity: 0, x: '-50px' }}
-            animate={{ opacity: 1, x: '0' }}
+            animate={{ opacity: 1, x: '-15px' }}
             exit={{ opacity: 0, x: '-50px' }}
           >
             <img src={blueShell} alt="" />
