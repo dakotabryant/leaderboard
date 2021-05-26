@@ -4,6 +4,12 @@ import { media } from '../../utils/responsive'
 
 export const LeaderBoardContainer = styled.div`
   position: relative;
+  text-align: right;
+  .title {
+    margin: 0 15px 0 0;
+    color: white;
+    font-size: 48px;
+  }
 `
 export const PlacementContainer = styled(motion.div)`
   display: flex;
@@ -16,6 +22,7 @@ export const PlacementContainer = styled(motion.div)`
   margin: 5px 0;
   cursor: pointer;
   border-radius: 15px;
+  margin-right: 15px;
   ${media.laptop`height: 65px`}
   ${media.tablet`min-width: initial; height: 55px;`};
   p {

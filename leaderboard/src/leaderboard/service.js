@@ -36,3 +36,20 @@ export const shellRacer = async (racerName) => {
     return []
   }
 }
+
+export const getItems = async () => {
+  const url = `${BASE_URL}/leaderboards/items`
+  try {
+    const res = await fetch(url, { HEADERS, MODE })
+
+    if (!res.ok) {
+      throw new HttpError(res)
+    }
+
+    const leaderboard = await res.json()
+    return leaderboard
+  } catch (e) {
+    console.error(e)
+    return []
+  }
+}

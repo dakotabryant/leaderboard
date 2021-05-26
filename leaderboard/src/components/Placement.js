@@ -5,7 +5,7 @@ import { PlacementContainer, RacerNameplate, Position, ShellPrompt } from '../le
 import { RacerIcon } from './'
 import blueShell from '../assets/blueShell.png'
 
-const Placement = ({ placement: { racer, position } }) => {
+const Placement = ({ position, name, altText, isRace }) => {
   const [showShell, setShowShell] = useState(false)
   return (
     <PlacementContainer
@@ -16,11 +16,11 @@ const Placement = ({ placement: { racer, position } }) => {
     >
       <Position>{position}</Position>
       <RacerNameplate>
-        <h1>{racer.name}</h1>
-        <RacerIcon racerName={racer.name} />
+        <h1>{name}</h1>
+        <RacerIcon racerName={name} />
       </RacerNameplate>
-      <p>Lap: {racer.laps}</p>
-      {showShell && (
+      <p>{altText}</p>
+      {showShell && isRace && (
         <AnimatePresence>
           <ShellPrompt
             initial={{ opacity: 0, x: '-50px' }}
