@@ -16,15 +16,13 @@ const Placement = ({ placement: { racer, position } }) => (
 export const Leaderboard = ({ placements, setShouldFetchRacers, shouldFetchRacers }) => {
   if (placements.length === 0) return <h2>Loading</h2>
   return (
-    <>
-      <LeaderBoardContainer>
-        {setShouldFetchRacers && (
-          <PauseButton onClick={setShouldFetchRacers} isPaused={shouldFetchRacers} />
-        )}
-        {placements.map((placement) => (
-          <Placement key={placement.racer.name} placement={placement} />
-        ))}
-      </LeaderBoardContainer>
-    </>
+    <LeaderBoardContainer>
+      {setShouldFetchRacers && (
+        <PauseButton onClick={setShouldFetchRacers} isPaused={shouldFetchRacers} />
+      )}
+      {placements.map((placement) => (
+        <Placement key={placement.racer.name} placement={placement} />
+      ))}
+    </LeaderBoardContainer>
   )
 }
